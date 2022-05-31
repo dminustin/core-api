@@ -46,4 +46,12 @@ class JeraRequestModel
         $this->request = $request;
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return json_encode([
+            'id' => $this->requestID,
+            'request' => $this->request
+        ], JSON_UNESCAPED_UNICODE);
+    }
 }
