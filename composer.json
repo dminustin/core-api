@@ -1,0 +1,19 @@
+{
+    "name": "jera/core-api",
+    "description": "Jera Core API SDK for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jera\\CoreApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "d.minustin",
+            "email": "danila.minustin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
