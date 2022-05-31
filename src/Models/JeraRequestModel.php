@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Jera\CoreApi\Models;
 
+use Illuminate\Support\Str;
+
 class JeraRequestModel
 {
     protected string $requestID;
@@ -53,5 +55,10 @@ class JeraRequestModel
             'id' => $this->requestID,
             'request' => $this->request
         ], JSON_UNESCAPED_UNICODE);
+    }
+
+    public function __construct()
+    {
+        $this->requestID = date('YmdHis') . '-' . Str::uuid();
     }
 }
