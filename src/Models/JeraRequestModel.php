@@ -10,6 +10,7 @@ class JeraRequestModel
 {
     protected string $requestID;
     protected array $request;
+    protected string $route;
 
     /**
      * @return string
@@ -48,6 +49,28 @@ class JeraRequestModel
         $this->request = $request;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getRoute(): string
+    {
+        return $this->route;
+    }
+
+    /**
+     * @param string $route
+     *
+     * @return self
+     */
+    public function setRoute(string $route): self
+    {
+        $this->route = $route;
+        return $this;
+    }
+
+
+
 
     public function __toString(): string
     {
