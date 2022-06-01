@@ -69,9 +69,6 @@ class JeraRequestModel
         return $this;
     }
 
-
-
-
     public function __toString(): string
     {
         return json_encode([
